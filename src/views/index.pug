@@ -2,8 +2,30 @@ doctype html
 html(lang="en")
   head
     include includes/header
-  body
-    h1 Hello World!
-    button.button click me
+  body.mdc-typography
+    aside.mdc-drawer.mdc-drawer--modal
+      .mdc-drawer__content
+        .mdc-list
+          a.mdc-list-item.mdc-list-item--activated(href='#', aria-selected='true')
+            i.material-icons.mdc-list-item__graphic(aria-hidden='true') inbox
+            span.mdc-list-item__text Inbox
+          a.mdc-list-item(href='#')
+            i.material-icons.mdc-list-item__graphic(aria-hidden='true') send
+            span.mdc-list-item__text Outgoing
+          a.mdc-list-item(href='#')
+            i.material-icons.mdc-list-item__graphic(aria-hidden='true') drafts
+            span.mdc-list-item__text Drafts
+    .mdc-drawer-scrim
+    .mdc-drawer-app-content
+      header.mdc-top-app-bar.mdc-top-app-bar--fixed.app-bar#app-bar
+        .mdc-top-app-bar__row
+          section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-start
+            a.demo-menu.material-icons.mdc-top-app-bar__navigation-icon(href='#') menu
+            span.mdc-top-app-bar__title Dismissible Drawer
+      main.main-content#main-content
+        
+        //- .mdc-top-app-bar--fixed-adjust
+
+    //- h1 some content
     
     include includes/footer
