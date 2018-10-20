@@ -2,6 +2,8 @@ import { MDCTopAppBar } from '@material/top-app-bar';
 import { MDCDrawer } from '@material/drawer';
 import { MDCTextField } from '@material/textfield';
 
+import './maps';
+
 new MDCTextField(document.querySelector('.mdc-text-field'));
 
 // if ('serviceWorker' in navigator) {

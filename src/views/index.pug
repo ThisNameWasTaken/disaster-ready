@@ -23,7 +23,18 @@ html(lang="en")
             a.demo-menu.material-icons.mdc-top-app-bar__navigation-icon(href='#') menu
             span.mdc-top-app-bar__title Dismissible Drawer
       main.main-content#main-content
-        
+        #map-container
+          #map
+          #map__content
+            #map__content__text Lorem Ipsum
+            #map__content__input
+              .mdc-text-field.mdc-text-field--outlined
+                input#tf-outlined.mdc-text-field__input(type='text')
+                label.mdc-floating-label(for='tf-outlined') Your Name
+                .mdc-notched-outline
+                  svg
+                    path.mdc-notched-outline__path
+                .mdc-notched-outline__idle
         //- .mdc-top-app-bar--fixed-adjust
 
     //- h1 some content
