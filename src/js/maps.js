@@ -1,6 +1,7 @@
 import { mapsStyle } from './maps.style';
 
 let latitude = 150.644, longitude = 150.644;
+let geocoder;
 
 (function getLocation() {
     if (!('geolocation' in navigator)) {
@@ -13,6 +14,32 @@ let latitude = 150.644, longitude = 150.644;
         self.initMap();
     });
 })();
+
+const searchCountryForm = document.getElementById('search-country');
+const searchCountryInput = document.getElementById('country-input');
+
+searchCountryInput.addEventListener('keyup', event => {
+    if (event.key === 'Enter') {
+        if (!searchCountryInput.value) {
+            return;
+        }
+        getLocationByCountry(searchCountryInput.value);
+    }
+});
+
+const mapElement = document.getElementById('map');
+
+function getLocationByCountry(country) {
+    if (!('geolocation' in navigator)) {
+        return;
+    }
+
+    geocoder.geocode({ 'address': country }, function (results, status) {
+        if (status == google.maps.GeocoderStatus.OK) {
+            self.map.setCenter(results[0].geometry.location);
+        }
+    });
+}
 
 self.initMap = function () {
     if (typeof google === 'undefined') {
@@ -31,4 +58,6 @@ self.initMap = function () {
         fullscreenControl: false,
         styles: mapsStyle
     });
+
+    geocoder = new google.maps.Geocoder();
 }

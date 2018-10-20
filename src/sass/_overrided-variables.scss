@@ -1,4 +1,7 @@
 $mdc-theme-primary: #F44336;
+$mdc-theme-on-surface: #fff;
+$mdc-text-field-label: rgba($mdc-theme-on-surface, 1);
+$mdc-text-field-outlined-idle-border: rgba($mdc-theme-on-surface, 1);
 
 $mdc-text-field-ink-color: #fff;
 $mdc-text-field-outline-color: #fff;
