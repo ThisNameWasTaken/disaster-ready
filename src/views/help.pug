@@ -1,0 +1,48 @@
+doctype html
+html(lang="en")
+  head
+    include includes/header
+  body.mdc-typography
+    aside.mdc-drawer.mdc-drawer--modal
+      .mdc-drawer__content
+        .mdc-list
+          a.mdc-list-item.mdc-list-item--activated(href='#', aria-selected='true')
+            i.material-icons.mdc-list-item__graphic(aria-hidden='true') inbox
+            span.mdc-list-item__text Inbox
+          a.mdc-list-item(href='#')
+            i.material-icons.mdc-list-item__graphic(aria-hidden='true') send
+            span.mdc-list-item__text Outgoing
+          a.mdc-list-item(href='#')
+            i.material-icons.mdc-list-item__graphic(aria-hidden='true') drafts
+            span.mdc-list-item__text Drafts
+    .mdc-drawer-scrim
+    .mdc-drawer-app-content
+      header.mdc-top-app-bar.mdc-top-app-bar--fixed.app-bar#app-bar
+        .mdc-top-app-bar__row
+          section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-start
+            a.demo-menu.material-icons.mdc-top-app-bar__navigation-icon(href='#') menu
+            span.mdc-top-app-bar__title 
+      main.main-content#main-content
+        #map-container
+          #map
+          #map__content
+            //<img src="../images/DisaterReady.png" />
+            #map__content__text Lorem Ipsum
+            #map__content__input
+              from#search-country(action="/search/country", method="POST")
+                .mdc-text-field.mdc-text-field--outlined
+                  input#country-input.mdc-text-field__input(type="text")
+                  label.mdc-floating-label(for='tf-outlined') Country
+                  .mdc-notched-outline
+                    svg
+                      path.mdc-notched-outline__path
+                  .mdc-notched-outline__idle
+            div.choose-buttons
+              button.mdc-button.mdc-button--raised I want to learn
+              button.mdc-button.mdc-button--raised I need help
+              button.mdc-button.mdc-button--raised I want to help
+        //- .mdc-top-app-bar--fixed-adjust
+
+    //- h1 some content
+    
+    include includes/footer
