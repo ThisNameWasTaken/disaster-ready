@@ -61,11 +61,13 @@
     "@material/drawer": "^0.40.1",
     "@material/elevation": "^0.40.1",
     "@material/fab": "^0.40.1",
+    "@material/form-field": "^0.40.1",
     "@material/icon-button": "^0.40.1",
     "@material/icon-toggle": "^0.40.1",
     "@material/theme": "^0.40.1",
     "@material/top-app-bar": "^0.40.1",
     "@material/typography": "^0.40.1",
+    "bulma": "^0.7.2",
     "gh-pages": "^2.0.1"
   }
 }
