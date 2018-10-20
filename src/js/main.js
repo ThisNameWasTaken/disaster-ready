@@ -1,8 +1,11 @@
 import { MDCTopAppBar } from '@material/top-app-bar';
 import { MDCDrawer } from '@material/drawer';
 import { MDCTextField } from '@material/textfield';
+import { MDCRipple } from '@material/ripple';
 
 import './maps';
+
+document.querySelectorAll('.mdc-button').forEach(button => new MDCRipple(button));
 
 new MDCTextField(document.querySelector('.mdc-text-field'));
 
