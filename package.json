@@ -52,6 +52,20 @@
     "workbox-webpack-plugin": "^3.6.2"
   },
   "dependencies": {
+    "@material/animation": "^0.40.1",
+    "@material/base": "^0.40.1",
+    "@material/button": "^0.40.1",
+    "@material/card": "^0.40.1",
+    "@material/chips": "^0.40.1",
+    "@material/dialog": "^0.40.1",
+    "@material/drawer": "^0.40.1",
+    "@material/elevation": "^0.40.1",
+    "@material/fab": "^0.40.1",
+    "@material/icon-button": "^0.40.1",
+    "@material/icon-toggle": "^0.40.1",
+    "@material/theme": "^0.40.1",
+    "@material/top-app-bar": "^0.40.1",
+    "@material/typography": "^0.40.1",
     "gh-pages": "^2.0.1"
   }
 }
