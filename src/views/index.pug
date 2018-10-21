@@ -19,15 +19,15 @@ html(lang="en")
     .mdc-drawer-app-content
       header.mdc-top-app-bar.mdc-top-app-bar--fixed.app-bar#app-bar
         .mdc-top-app-bar__row
-          section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-start
+          section.mdc-top-app-bar__section.mdc-top-app-bar__section--align-start(style="overflow: hidden")
             a.demo-menu.material-icons.mdc-top-app-bar__navigation-icon(href='#') menu
             span.mdc-top-app-bar__title 
+              img(src="./../images/DisaterReady.png", style="height: 120px; transform: translate(-16px, 4px)")
       main.main-content#main-content
         #map-container
           #map
           #map__content
             //<img src="../images/DisaterReady.png" />
-            //img(src="../images/DisasterReady.png")
             #map__content__text
             #dot.dot
             #map__content__input
@@ -41,7 +41,7 @@ html(lang="en")
                   .mdc-notched-outline__idle
             div.choose-buttons
               a(href="#survival-skills").mdc-button.mdc-button--raised I want to learn
-              button.mdc-button.mdc-button--raised I need help
+              a(href="#i-want-to-help").mdc-button.mdc-button--raised I need help
               button.mdc-button.mdc-button--raised I want to help
         //- .mdc-top-app-bar--fixed-adjuts
         //- content goes here
@@ -74,17 +74,28 @@ html(lang="en")
               div.bag-item(style="display:block;")
                 img.right(src="../images/first-aid.png", style="max-height: 80%", data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce")  
             h2.title.is-2.has-text-white(data-sal="slide-up", data-sal-delay="600", data-sal-easing="ease-out-bounce") These are the essentials for surviving
+            h2.title.is-2.has-text-white(style="padding-top:80px;", data-sal="slide-up", data-sal-delay="600", data-sal-easing="ease-out-bounce") Latest news about natural disasters in your area
 
           .container.section.is-medium   
             #popular-disasters.columns.is-multiline
       
-          #i-want-to-help.section.container
-            ul.mdc-list(aria-orientation='vertical')
-              li.mdc-list-item
-                span.mdc-list-item__text Single-line item
-              li.mdc-list-item
-                span.mdc-list-item__text Single-line item
-              li.mdc-list-item
-                span.mdc-list-item__text Single-line item       
+          //- img(src="./../images/flood.svg")
+
+          form(action="")#i-want-to-help.section.container.mdc-card(style="background: #818181")
+            .mdc-text-field.mdc-text-field--outlined
+              input#help-title.mdc-text-field__input(type='text')
+              label.mdc-floating-label(for='tf-outlined') Message
+              .mdc-notched-outline
+                svg
+                  path.mdc-notched-outline__path
+              .mdc-notched-outline__idle
+            .mdc-text-field.mdc-text-field--outlined
+              input#help-donation-url.mdc-text-field__input(type='text')
+              label.mdc-floating-label(for='tf-outlined') Donation Url
+              .mdc-notched-outline
+                svg
+                  path.mdc-notched-outline__path
+              .mdc-notched-outline__idle
+            button(type="submit").mdc-button.mdc-button--raised(style="background: teal") get help       
     
     include includes/footer

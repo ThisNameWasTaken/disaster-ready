@@ -11,7 +11,7 @@ const cardListTemplate = disasters => html`${disasters.map((disaster) => html`
     <div class="mdc-card">
         <div class="mdc-card__media mdc-card__media--square">
             <div class="mdc-card__media-content">
-                <h2 class="mdc-card__title">${disaster.title.split(' ').slice(0, 12).join(' ')}</h2>
+                <h2 class="mdc-card__title"> ${ disaster.title.split(' ').slice(0, 12).join(' ')}</h2>
             </div>
         </div>
         <div class="mdc-card__actions">

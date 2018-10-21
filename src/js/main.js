@@ -10,7 +10,8 @@ import './renderArticles';
 
 document.querySelectorAll('.mdc-button').forEach(button => new MDCRipple(button));
 
-new MDCTextField(document.querySelector('.mdc-text-field'));
+// new MDCTextField(document.querySelector('.mdc-text-field'));
+document.querySelectorAll('.mdc-text-field').forEach(textField => new MDCTextField(textField));
 //new MDCTabIndicator(document.querySelector('.mdc-tab-indicator'));
 new MDCList(document.querySelector('.mdc-list'));
 

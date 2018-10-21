@@ -123,13 +123,13 @@
     display: inline-block;
 
     &.green {
-        background-color: green;
+        background-color: #76FF03;
     }
     &.red {
-        background-color: red;
+        background-color: #FF1744;
     }
     &.orange {
-        background-color: orange;
+        background-color: #FFC400;
     }
 }
 
@@ -155,4 +155,24 @@
     background: #3a7bd5;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to top, #5fb7e4, #3a7bd5);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #5fb7e4, #3a7bd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#i-want-to-help > * {
+    margin-bottom: 1rem;
+}
+
+// .mdc-card__media-content {
+//     background: #3a7bd5;
+// }
+
+.flood {
+    background-image: url('./../images/flood.svg');
+}
+
+.earthquake {
+    background-image: url('./../images/earthquake.svg');
+}
+
+.typhoon {
+    background-image: url('./../images/typhoon.svg');
 }
