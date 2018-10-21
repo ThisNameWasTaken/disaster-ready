@@ -15,7 +15,6 @@ let geocoder;
     });
 })();
 
-const searchCountryForm = document.getElementById('search-country');
 const searchCountryInput = document.getElementById('country-input');
 
 searchCountryInput.addEventListener('keyup', event => {
@@ -46,8 +45,7 @@ self.initMap = function () {
         return;
     }
 
-    console.log('init map called', latitude, longitude);
-    self.map = new google.maps.Map(document.getElementById('map'), {
+    self.map = new google.maps.Map(mapElement, {
         center: { lat: latitude, lng: longitude },
         zoom: 8,
         zoomControl: false,
