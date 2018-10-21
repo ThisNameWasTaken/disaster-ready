@@ -6,6 +6,7 @@ import { MDCRipple } from '@material/ripple';
 import { MDCList } from '@material/list';
 import SmoothScroll from 'smooth-scroll';
 import sal from 'sal.js/dist/sal';
+import './renderArticles';
 
 document.querySelectorAll('.mdc-button').forEach(button => new MDCRipple(button));
 
@@ -27,3 +28,17 @@ sal();
 topAppBar.listen('MDCTopAppBar:nav', () => {
     drawer.open = !drawer.open;
 });
+
+fetch('http://localhost:3000/help-requests', {
+    mode: "cors", // no-cors, cors, *same-origin
+    cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: "same-origin", // include, same-origin, *omit
+    headers: {
+        "Content-Type": "application/json; charset=utf-8",
+        "Access-Control-Allow-Origin": "*"
+    },
+    referrer: "no-referrer", // no-referrer, *client
+})
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));

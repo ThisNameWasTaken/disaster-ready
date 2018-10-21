@@ -10,7 +10,11 @@
 @import "@material/theme/mdc-theme";
 @import "@material/textfield/mdc-text-field";
 @import "@material/button/mdc-button";
+@import "@material/icon-button/mdc-icon-button";
 @import "~sal.js/dist/sal.css";
+@import "@material/card/mdc-card";
+
+// @import "bulma-tooltip/src/sass/index";
 
 @mixin absolute-centered {
     top: 50%;
@@ -52,11 +56,25 @@
     margin-bottom: 0;
 }
 
+
 #map__content__text {
-    @include mdc-typography('headline3');
-    color: $mdc-theme-on-primary;
+    @include mdc-typography('headline4');
+    color: rgba($mdc-theme-on-primary, .87);
     text-align: center;
     margin-bottom: 1rem;
+}
+
+.mdc-card__media-content {
+    padding: 1rem;
+    overflow: hidden;
+}
+
+.mdc-card__title {
+    @include mdc-typography('subtitle1');
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    padding: 1rem;
 }
 
 .choose-buttons {
@@ -91,17 +109,34 @@
 
 .left {
     float:left;
-    margin-left: 5rem;
 }
 
 .right {
     float:right;
-    margin-right: 5rem;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+
+    &.green {
+        background-color: green;
+    }
+    &.red {
+        background-color: red;
+    }
+    &.orange {
+        background-color: orange;
+    }
 }
 
 .bag-item {
     height: 10rem;
     display: block;
+    margin: 0 5rem;
     img {
         width: auto;
         max-height: 100%; 

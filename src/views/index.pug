@@ -27,7 +27,9 @@ html(lang="en")
           #map
           #map__content
             //<img src="../images/DisaterReady.png" />
-            #map__content__text Lorem Ipsum
+            //img(src="../images/DisasterReady.png")
+            #map__content__text
+            #dot.dot
             #map__content__input
               from#search-country(action="/search/country", method="POST")
                 .mdc-text-field.mdc-text-field--outlined
@@ -45,9 +47,11 @@ html(lang="en")
         //- content goes here
         #kit
           #survival-skills
-            div(style="height:5000px;").section
+            div.section.is-medium
               div.sticky-bag
-                h1.title.is-1(style="padding-top:50px;") Basic Survival Kit
+                h1.title.is-1.has-text-white(style="padding-top: 40px")
+                  div(data-sal="slide-left", data-sal-delay="600", data-sal-easing="ease-out-bounce") Basic
+                  div(data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce") Survival Kit
                 img(src="../images/bag.svg")
               div.bag-item(style="display:block;")
                 img.left(src="../images/water.png", data-sal="slide-left", data-sal-delay="600", data-sal-easing="ease-out-bounce")
@@ -56,22 +60,25 @@ html(lang="en")
               div.bag-item(style="display:block;")
                 img.left(src="../images/knife.svg", data-sal="slide-left", data-sal-delay="600", data-sal-easing="ease-out-bounce")
               div.bag-item(style="display:block;")
-                img.right(src="../images/pliers.svg", style="transform:rotate(90deg) translateY(-70%) scale(0.5);", data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce")  
+                img.right(src="../images/pliers.svg", data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce")  
               div.bag-item(style="display:block;")
-                img.left(src="../images/whistle.png", style="transform:scale(0.6);", data-sal="slide-left", data-sal-delay="600", data-sal-easing="ease-out-bounce")
+                img.left(src="../images/whistle.png", style="max-height: 60%", data-sal="slide-left", data-sal-delay="600", data-sal-easing="ease-out-bounce")
               div.bag-item(style="display:block;")
-                img.right(src="../images/flashlight.png", style="transform:scale(0.8);", data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce")  
+                img.right(src="../images/flashlight.png", style="max-height: 80%", data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce")  
               div.bag-item(style="display:block;")
-                img.left(src="../images/map.png", style="transform:scale(0.6);", data-sal="slide-left", data-sal-delay="600", data-sal-easing="ease-out-bounce")
+                img.left(src="../images/map.png", style="max-height: 60%", data-sal="slide-left", data-sal-delay="600", data-sal-easing="ease-out-bounce")
               div.bag-item(style="display:block;")
-                img.right(src="../images/phone.png", style="transform:scale(0.8);", data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce")  
+                img.right(src="../images/phone.png", style="max-height: 80%", data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce")  
               div.bag-item(style="display:block;")
-                img.left(src="../images/Power-Options.png", style="transform:scale(0.6);", data-sal="slide-left", data-sal-delay="600", data-sal-easing="ease-out-bounce")
+                img.left(src="../images/Power-Options.png", style="max-height: 60%", data-sal="slide-left", data-sal-delay="600", data-sal-easing="ease-out-bounce")
               div.bag-item(style="display:block;")
-                img.right(src="../images/first-aid.png", style="transform:scale(0.8);", data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce")  
-            
-          #i-want-to-help
-          div(style="height:500px;")
+                img.right(src="../images/first-aid.png", style="max-height: 80%", data-sal="slide-right", data-sal-delay="600", data-sal-easing="ease-out-bounce")  
+            h2.title.is-2.has-text-white(data-sal="slide-up", data-sal-delay="600", data-sal-easing="ease-out-bounce") These are the essentials for surviving
+
+          .container.section.is-medium   
+            #popular-disasters.columns.is-multiline
+      
+          #i-want-to-help.section.container
             ul.mdc-list(aria-orientation='vertical')
               li.mdc-list-item
                 span.mdc-list-item__text Single-line item
@@ -79,8 +86,5 @@ html(lang="en")
                 span.mdc-list-item__text Single-line item
               li.mdc-list-item
                 span.mdc-list-item__text Single-line item       
-             
-             
-      //- h1 some content
     
     include includes/footer
